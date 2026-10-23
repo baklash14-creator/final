@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Abu Bakarr Kamara | IT Student & App Builder</title>
-<meta name="description" content="Portfolio of Abu Bakarr Kamara, Information Technology student at Limkokwing. I build web apps like SL Connect. Contact me to build an app for you.">
+<meta name="description" content="Portfolio of Abu Bakarr Kamara, Information Technology student at Limkokwing. I build web apps like SL Connect and Game Boi. Contact me to build an app for you.">
 <meta name="theme-color" content="#0b7a3b">
 <style>
 :root{
-  --green:#0fa353; --green-dark:#087a3c; --blue:#2a7de1; --gold:#f5b800;
+  --green:#0fa353; --green-dark:#087a3c; --blue:#2a7de1; --gold:#f5b800; --purple:#7c4dff;
   --bg:#f4f8f6; --card:#ffffff; --text:#12201a; --muted:#587066; --line:#dfe9e4;
   --shadow:0 10px 30px rgba(10,60,35,.08);
 }
@@ -82,6 +82,12 @@ h2{font-size:clamp(1.5rem,5vw,2.1rem);margin:4px 0 22px;letter-spacing:-.01em}
 
 /* PROJECT */
 .project{position:relative;overflow:hidden;border-top:5px solid var(--green)}
+.project + .project{margin-top:22px}
+.project.game{border-top-color:var(--purple)}
+.project.game .feat li::before{color:var(--purple)}
+.project.game .btn.primary{background:var(--purple);border-color:var(--purple);box-shadow:0 8px 20px rgba(124,77,255,.3)}
+.project.game .btn.primary:hover{background:#6236e0}
+.project.game .btn.ghost{color:var(--purple);border-color:var(--purple)}
 .project h3{font-size:1.5rem;margin-bottom:6px}
 .badge{display:inline-block;font-size:.72rem;font-weight:800;background:var(--gold);color:#3a2d00;padding:3px 10px;border-radius:99px;margin-bottom:10px;letter-spacing:.04em}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
@@ -146,11 +152,10 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 16px 9
           <p class="lead">Information Technology student at Limkokwing University. I turn ideas into fast, phone-friendly web apps for Sierra Leone and beyond.</p>
           <div class="btns">
             <a class="btn primary" href="#hire">Contact me to build your app</a>
-            <a class="btn ghost" href="https://sl-connect.vercel.app/" target="_blank" rel="noopener">See my work</a>
-            <a class="btn ghost" href="https://gameboi-five.vercel.app/" target="_blank" rel="noopener">See my work</a>
+            <a class="btn ghost" href="#projects">See my work</a>
           </div>
           <div class="stats">
-            <div><b>SL Connect</b><small>My main project</small></div>
+            <div><b>2 live apps</b><small>SL Connect &amp; Game Boi</small></div>
             <div><b>PWA</b><small>Installable apps</small></div>
             <div><b>Krio + English</b><small>Language support</small></div>
           </div>
@@ -172,15 +177,17 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 16px 9
       <div class="eyebrow">About me</div>
       <h2>Learning, building, shipping</h2>
       <div class="card">
-        <p>I am an Information Technology student at Limkokwing University, currently in semester 3. I love building web apps that work well on phones, because that is how most people in Sierra Leone get online. My biggest project so far is <b>SL Connect</b>, a platform that helps people find jobs, workers, houses to rent and land for sale.</p>
+        <p>I am an Information Technology student at Limkokwing University, currently in semester 3. I love building web apps that work well on phones, because that is how most people in Sierra Leone get online. My biggest project so far is <b>SL Connect</b>, a platform that helps people find jobs, workers, houses to rent and land for sale. I also built <b>Game Boi</b>, a gaming platform made for players who want to play, compete and win.</p>
       </div>
     </section>
 
     <section id="projects" class="rv">
-      <div class="eyebrow">Featured project</div>
-      <h2>SL Connect</h2>
+      <div class="eyebrow">Featured projects</div>
+      <h2>Things I've built</h2>
+
       <div class="card project">
         <span class="badge">LIVE PROJECT</span>
+        <h3>SL Connect</h3>
         <p style="color:var(--muted)">An installable web app (PWA) for finding work, workers, houses for rent and land for sale in Sierra Leone. Built to be fast, simple and perfect on a phone screen.</p>
         <div class="tags">
           <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PWA</span><span>Supabase</span><span>GitHub</span>
@@ -200,6 +207,28 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 16px 9
           <a class="btn ghost" href="YOUR-GITHUB-REPO-LINK" target="_blank" rel="noopener">View code</a>
         </div>
       </div>
+
+      <div class="card project game">
+        <span class="badge">LIVE PROJECT</span>
+        <h3>Game Boi</h3>
+        <p style="color:var(--muted)">A gaming platform with the motto <b>Play. Compete. Win.</b> It has a dark, neon gaming look and a marketplace, with clear rules for the community.</p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Single-page app</span><span>Vercel</span>
+        </div>
+        <ul class="feat">
+          <li>Play and compete: built around winning</li>
+          <li>Marketplace for gaming items and deals</li>
+          <li>Dark gaming theme that is easy on the eyes</li>
+          <li>Fast single-page app with smooth navigation</li>
+          <li>Community guidelines to keep players safe</li>
+          <li>Terms, Privacy and Marketplace disclaimer pages</li>
+          <li>Contact page so players can reach support</li>
+          <li>Works on phones, tablets and computers</li>
+        </ul>
+        <div class="btns">
+          <a class="btn primary" href="https://gameboi-five.vercel.app/" target="_blank" rel="noopener">Open Game Boi</a>
+        </div>
+      </div>
     </section>
 
     <section id="services" class="rv">
@@ -209,6 +238,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 16px 9
         <div class="card hover"><div class="icon">🌐</div><h3>Websites</h3><p>Business sites, portfolios and landing pages that look great and load fast.</p></div>
         <div class="card hover"><div class="icon">📱</div><h3>Mobile web apps (PWA)</h3><p>Apps your customers can install on their phone, with no app store needed.</p></div>
         <div class="card hover"><div class="icon">🔐</div><h3>Login &amp; database apps</h3><p>User accounts, listings, reviews and settings, built with Supabase.</p></div>
+        <div class="card hover"><div class="icon">🎮</div><h3>Gaming &amp; marketplace apps</h3><p>Platforms for players and sellers, with a bold look and clear rules.</p></div>
         <div class="card hover"><div class="icon">🗣️</div><h3>Local language support</h3><p>Apps that speak your customers' language, including Krio and English.</p></div>
       </div>
     </section>
@@ -248,7 +278,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 16px 9
     <section id="hire" class="rv">
       <div class="cta">
         <h2>Need an app? Let's build it.</h2>
-        <p>Tell me what you want to build and I will reply as soon as I can. Whether it is a business website or a full app like SL Connect, I would love to help.</p>
+        <p>Tell me what you want to build and I will reply as soon as I can. Whether it is a business website or a full app like SL Connect or Game Boi, I would love to help.</p>
         <div class="btns">
           <a class="btn" href="mailto:abubakish81@gmail.com?subject=I%20want%20you%20to%20build%20an%20app&body=Hi%20Abu%20Bakarr%2C%0A%0AI%20need%20an%20app%20or%20website%20for%3A%0A%0AMy%20name%3A%0A">Email me your idea</a>
           <a class="btn alt" href="#contact">Other ways to reach me</a>
